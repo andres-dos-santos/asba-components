@@ -1,12 +1,10 @@
 {
   "name": "@asba/components",
   "version": "1.0.1",
-  "main": "./src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/index.ts",
+  "scripts": {},
   "keywords": [],
-  "author": "",
+  "author": "andres-dos-santsos",
   "license": "ISC",
   "description": "",
   "devDependencies": {

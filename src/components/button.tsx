@@ -1,4 +1,9 @@
-import { TouchableOpacity, type TouchableOpacityProps } from "react-native";
+import {
+	Text,
+	type TextProps,
+	TouchableOpacity,
+	type TouchableOpacityProps,
+} from "react-native";
 
 export function Button(props: TouchableOpacityProps) {
 	return (
@@ -6,4 +11,8 @@ export function Button(props: TouchableOpacityProps) {
 			{props.children}
 		</TouchableOpacity>
 	);
+}
+
+export function ButtonTitle(props: TextProps) {
+	return <Text {...props}>{props.children}</Text>;
 }
