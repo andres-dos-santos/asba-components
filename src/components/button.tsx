@@ -5,14 +5,14 @@ import {
 	type TouchableOpacityProps,
 } from "react-native";
 
-export function Button(props: TouchableOpacityProps) {
+export function Button({ children, ...props }: TouchableOpacityProps) {
 	return (
 		<TouchableOpacity activeOpacity={0.9} {...props}>
-			{props.children}
+			{children}
 		</TouchableOpacity>
 	);
 }
 
-export function ButtonTitle(props: TextProps) {
-	return <Text {...props}>{props.children}</Text>;
+export function ButtonTitle({ children, ...props }: TextProps) {
+	return <Text {...props}>{children}</Text>;
 }

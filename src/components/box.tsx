@@ -1,5 +1,5 @@
 import { View, type ViewProps } from "react-native";
 
-export function Box(props: ViewProps) {
-	return <View {...props}>{props.children}</View>;
+export function Box({ children, ...props }: ViewProps) {
+	return <View {...props}>{children}</View>;
 }

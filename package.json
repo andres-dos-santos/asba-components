@@ -3,12 +3,12 @@
   "version": "1.0.7",
   "main": "src/index.ts",
   "scripts": {},
-  "keywords": [],
+  "keywords": ["asba"],
   "author": "andres-dos-santsos",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/react": "^19.0.12",
+    "@types/react": "18.3.1",
     "typescript": "^5.8.2"
   },
   "dependencies": {

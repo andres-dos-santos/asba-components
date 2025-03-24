@@ -1,9 +1,9 @@
 import { StyleSheet, View, type ViewProps } from "react-native";
 
-export function Row({ style, ...props }: ViewProps) {
+export function Row({ style, children, ...props }: ViewProps) {
 	return (
 		<View style={[style, s.container]} {...props}>
-			{props.children}
+			{children}
 		</View>
 	);
 }
