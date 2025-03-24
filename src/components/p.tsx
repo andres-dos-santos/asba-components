@@ -6,7 +6,7 @@ export function P({ children, style, ...props }: TextProps) {
 	const colorScheme = useColorScheme();
 
 	return (
-		<Text style={[style, { color: colorScheme.foreground }]} {...props}>
+		<Text style={[{ color: colorScheme.foreground }, style]} {...props}>
 			{children}
 		</Text>
 	);
