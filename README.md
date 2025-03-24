@@ -69,6 +69,21 @@ const App = () => (
 );
 ```
 
+### useColorScheme
+The color style that is on the device (dark/light)
+
+#### Usage:
+```tsx
+import { useColorScheme } from '@asba/components';
+
+const App = () => {
+  const colorScheme = useColorScheme()
+
+  colors[colorScheme].background
+  colors[colorScheme].foreground
+};
+```
+
 ## Customization
 
 All components accept standard React Native properties, such as `style`, allowing full customization of their appearance and behavior.
