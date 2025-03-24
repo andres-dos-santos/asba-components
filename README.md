@@ -60,11 +60,11 @@ An unstyled button for user actions.
 
 #### Usage:
 ```tsx
-import { Button } from '@asba/components';
+import { Button, ButtonTitle } from '@asba/components';
 
 const App = () => (
   <Button onPress={() => alert('Button pressed!')} style={{ backgroundColor: 'blue' }}>
-    Click Here
+    <ButtonTitle>Click Here</ButtonTitle>
   </Button>
 );
 ```
