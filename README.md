@@ -1,103 +1,20 @@
-A set of reusable components for React Native applications. This package was created to simplify the development of modern and consistent interfaces.
+A package designed to accelerate development with React Native. It provides some spacing tokens, colors (default, but you can add your own), font sizes, and border radius values.
 
-## Installation
+The idea was to create a package with no styling, delivering only a skeleton with various components.
 
-Install the package using npm or yarn:
-
-```bash
-npm install @asba/components
-# or
-yarn add @asba/components
-```
+This package is fully tested and written in TypeScript, so reliability is high.
 
 ## Available Components
 
-### P
-A simple and unstyled text component.
+- **P** - A simple paragraph component.
+- **Box** - A `View`, similar to an HTML `div`.
+- **Row** - A `View` with horizontal layout.
+- **Button** - A button, similar to `TouchableOpacity`.
+  - **ButtonTitle** - The title of the button.
+- **Input** - A wrapper for input fields.
+  - **InputLabel** - The label for the input.
+  - **InputField** - The text field for user input.
 
-#### Usage:
-```tsx
-import { P } from '@asba/components';
+## Additional Features
 
-const App = () => (
-  <P style={{ color: 'blue' }}>
-    This is a styled paragraph.
-  </P>
-);
-```
-
-### Box
-A generic container for layouts.
-
-#### Usage:
-```tsx
-import { Box } from '@asba/components';
-
-const App = () => (
-  <Box style={{ padding: 16, backgroundColor: 'lightgray' }}>
-    <P>Content inside the Box</P>
-  </Box>
-);
-```
-
-### Row
-A container for horizontal layouts.
-
-#### Usage:
-```tsx
-import { Row } from '@asba/components';
-
-const App = () => (
-  <Row style={{ justifyContent: 'space-between', padding: 16 }}>
-    <P>Item 1</P>
-    <P>Item 2</P>
-  </Row>
-);
-```
-
-### Button
-An unstyled button for user actions.
-
-#### Usage:
-```tsx
-import { Button, ButtonTitle } from '@asba/components';
-
-const App = () => (
-  <Button onPress={() => alert('Button pressed!')} style={{ backgroundColor: 'blue' }}>
-    <ButtonTitle>Click Here</ButtonTitle>
-  </Button>
-);
-```
-
-### useColorScheme
-The color style that is on the device (dark/light)
-
-#### Usage:
-```tsx
-import { useColorScheme } from '@asba/components';
-
-const App = () => {
-  const colorScheme = useColorScheme()
-
-  colors[colorScheme].background
-  colors[colorScheme].foreground
-};
-```
-
-## Customization
-
-All components accept standard React Native properties, such as `style`, allowing full customization of their appearance and behavior.
-
-## Contribution
-
-Contributions are welcome! Feel free to open issues or submit PRs to improve this package.
-
-1. Fork the repository.
-2. Create a branch for your feature or fix: `git checkout -b my-feature`.
-3. Commit your changes: `git commit -m 'My new feature'`.
-4. Open a pull request.
-
-## License
-
-This project is licensed under the MIT license. See the [LICENSE](./LICENSE) file for more details.
-
+Includes the `useColorScheme` hook, which allows integration with light and dark themes using your custom color palette.
