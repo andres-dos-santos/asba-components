@@ -2,7 +2,9 @@
   "name": "@asba/components",
   "version": "1.0.18",
   "main": "src/index.ts",
-  "scripts": {},
+  "scripts": {
+    "test": "vitest"
+  },
   "keywords": [
     "asba",
     "react",
@@ -14,8 +16,13 @@
   "description": "",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@testing-library/react-native": "^13.2.0",
     "@types/react": "18.3.1",
-    "typescript": "^5.8.2"
+    "@vitejs/plugin-react": "^4.3.4",
+    "react-test-renderer": "^18.3.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9",
+    "vitest-react-native": "^0.1.5"
   },
   "dependencies": {
     "react": "18.3.1",
