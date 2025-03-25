@@ -16,7 +16,9 @@ export {
 	type InputFieldProps,
 } from "./components/input";
 
-export { useColorScheme } from "./hooks/use-color-scheme";
+// export { useColorScheme } from "./hooks/use-color-scheme";
+
+export { ThemeContext, ThemeProvider, useColorScheme } from "./providers/theme";
 
 export { spacings } from "./constants/spacings";
 export { fontSizes } from "./constants/font-sizes";
