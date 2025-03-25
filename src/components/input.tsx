@@ -6,15 +6,15 @@ import { P, type PProps } from "./p";
 
 import { useColorScheme } from "../hooks/use-color-scheme";
 
-export type Input = BoxProps;
+export type InputProps = BoxProps;
 
-export function Input({ children, ...props }: Input) {
+export function Input({ children, ...props }: InputProps) {
 	return <Box {...props}>{children}</Box>;
 }
 
-export type InputProps = TextInputProps;
+export type InputFieldProps = TextInputProps;
 
-export function InputField({ style, children, ...props }: InputProps) {
+export function InputField({ style, children, ...props }: InputFieldProps) {
 	const [focused, setFocused] = useState(false);
 
 	const colorScheme = useColorScheme();

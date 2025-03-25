@@ -7,6 +7,14 @@ export {
 } from "./components/button";
 export { P, type PProps } from "./components/p";
 export { Row, type RowProps } from "./components/row";
+export {
+	Input,
+	InputField,
+	InputLabel,
+	type InputLabelProps,
+	type InputProps,
+	type InputFieldProps,
+} from "./components/input";
 
 export { useColorScheme } from "./hooks/use-color-scheme";
 
