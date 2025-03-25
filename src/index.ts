@@ -18,8 +18,6 @@ export {
 
 export { useColorScheme } from './hooks/use-color-scheme'
 
-export { ThemeContext, ThemeProvider } from './providers/theme'
-
 export { spacings } from './constants/spacings'
 export { fontSizes } from './constants/font-sizes'
 export { borderRadius } from './constants/border-radius'
