@@ -1,23 +1,24 @@
-import { StyleSheet, TextInput, type TextInputProps } from "react-native";
-import { useState } from "react";
+import { StyleSheet, TextInput, type TextInputProps } from 'react-native'
+import { useState } from 'react'
 
-import { Box, type BoxProps } from "./box";
-import { P, type PProps } from "./p";
+import { Box, type BoxProps } from './box'
+import { P, type PProps } from './p'
 
-import { useColorScheme } from "../hooks/use-color-scheme";
+import { useColorScheme } from '../hooks/use-color-scheme'
 
-export type InputProps = BoxProps;
+import { colors } from '../constants/colors'
+
+export type InputProps = BoxProps
 
 export function Input({ children, ...props }: InputProps) {
-	return <Box {...props}>{children}</Box>;
+	return <Box {...props}>{children}</Box>
 }
 
-export type InputFieldProps = TextInputProps;
+export type InputFieldProps = TextInputProps
 
 export function InputField({ style, children, ...props }: InputFieldProps) {
-	const [focused, setFocused] = useState(false);
-
-	const colorScheme = useColorScheme();
+	const [focused, setFocused] = useState(false)
+	const colorScheme = useColorScheme(colors)
 
 	return (
 		<TextInput
@@ -25,18 +26,20 @@ export function InputField({ style, children, ...props }: InputFieldProps) {
 				style,
 				{
 					borderWidth: StyleSheet.hairlineWidth,
-					borderColor: colorScheme[focused ? "borderFocused" : "border"],
+					borderColor: focused
+						? colorScheme.focus.base
+						: colorScheme.focus.base,
 				},
 			]}
 			onFocus={() => setFocused(true)}
 			onBlur={() => setFocused(false)}
 			{...props}
 		/>
-	);
+	)
 }
 
-export type InputLabelProps = PProps;
+export type InputLabelProps = PProps
 
 export function InputLabel({ children, ...props }: InputLabelProps) {
-	return <P {...props}>{children}</P>;
+	return <P {...props}>{children}</P>
 }

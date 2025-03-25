@@ -1,18 +1,28 @@
 {
   "name": "@asba/components",
-  "version": "1.0.2",
+  "version": "1.0.18",
   "main": "src/index.ts",
   "scripts": {},
-  "keywords": [],
+  "keywords": [
+    "asba",
+    "react",
+    "react-native",
+    "expo"
+  ],
   "author": "andres-dos-santsos",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/react": "^19.0.12",
+    "@biomejs/biome": "1.9.4",
+    "@types/react": "18.3.1",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-native": "^0.78.1"
+    "react": "18.3.1",
+    "react-native": "0.76.7"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-native": "0.76.7"
   }
 }

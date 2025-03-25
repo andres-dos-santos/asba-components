@@ -1,18 +1,18 @@
-import {
-	Text,
-	type TextProps,
-	TouchableOpacity,
-	type TouchableOpacityProps,
-} from "react-native";
+import { TouchableOpacity, type TouchableOpacityProps } from 'react-native'
+import { P, type PProps } from './p'
 
-export function Button(props: TouchableOpacityProps) {
+export type ButtonProps = TouchableOpacityProps
+
+export function Button({ children, ...props }: ButtonProps) {
 	return (
 		<TouchableOpacity activeOpacity={0.9} {...props}>
-			{props.children}
+			{children}
 		</TouchableOpacity>
-	);
+	)
 }
 
-export function ButtonTitle(props: TextProps) {
-	return <Text {...props}>{props.children}</Text>;
+export type ButtonTitleProps = PProps
+
+export function ButtonTitle({ children, ...props }: ButtonTitleProps) {
+	return <P {...props}>{children}</P>
 }
