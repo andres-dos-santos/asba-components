@@ -21,3 +21,5 @@ export { useColorScheme } from './hooks/use-color-scheme'
 export { spacings } from './constants/spacings'
 export { fontSizes } from './constants/font-sizes'
 export { borderRadius } from './constants/border-radius'
+
+export { onChangeTheme } from './functions/change-theme'
