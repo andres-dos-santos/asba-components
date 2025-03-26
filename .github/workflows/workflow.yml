@@ -19,4 +19,4 @@ jobs:
         node-version: '18'
 
     - name: Install deps
-      uses: npm install
+      run: npm install
