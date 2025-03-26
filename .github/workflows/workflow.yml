@@ -1,0 +1,22 @@
+name: CI - test, version & publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Code checkout
+      uses: actions/checkout@v3
+
+    - name: Node config 
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install deps
+      uses: npm install
