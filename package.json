@@ -1,6 +1,6 @@
 {
   "name": "@asba/components",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "src/index.ts",
   "scripts": {},
   "keywords": [
