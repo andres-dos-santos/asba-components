@@ -9,6 +9,7 @@ This package is fully tested and written in TypeScript, so reliability is high.
 - **P** - A simple paragraph component.
 - **Box** - A `View`, similar to an HTML `div`.
 - **Row** - A `View` with horizontal layout.
+- **Tag** - A tag component, you can pass whatever color you want.
 - **Button** - A button, similar to `TouchableOpacity`.
   - **ButtonTitle** - The title of the button.
 - **Input** - A wrapper for input fields.
@@ -27,4 +28,12 @@ import { colors } from 'my-color-palette'; // must have 'dark' and 'light' as ke
 export function useMyHook() {
   return useColorScheme(colors);
 }
+```
+
+If you want to change the app theme, just run this function.
+
+```tsx
+import { onChangeTheme } from '@asba/components'
+
+onChangeTheme()
 ```
