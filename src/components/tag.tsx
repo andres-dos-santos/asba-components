@@ -3,11 +3,11 @@ import { StyleSheet, type TextProps } from 'react-native'
 import { Box } from './box'
 import { P } from './p'
 
-export function Tag(
-	props: TextProps & {
-		color: string
-	},
-) {
+export type TagProps = TextProps & {
+	color: string
+}
+
+export function Tag({ style, ...props }: TagProps) {
 	return (
 		<Box
 			style={[
@@ -23,7 +23,9 @@ export function Tag(
 					{
 						color: props.color,
 					},
+					style,
 				]}
+				{...props}
 			>
 				{props.children}
 			</P>
