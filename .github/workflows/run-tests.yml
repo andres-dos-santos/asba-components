@@ -1,0 +1,22 @@
+name: Run tests from 'test' branch on 'develop' push
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: test 
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run test
