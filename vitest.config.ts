@@ -5,7 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 	plugins: [reactNative(), react()],
 	test: {
-		setupFiles: ['./vitest.setup.ts'],
 		globals: true,
 	},
 })
