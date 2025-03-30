@@ -1,12 +1,13 @@
-import {
-	StyleSheet,
-	type ImageStyle,
-	type TextStyle,
-	type ViewStyle,
-} from 'react-native'
+import type { ImageStyle, TextStyle, ViewStyle } from 'react-native'
 
-const Props = {
-	colors: {},
+type Any = any
+
+const tokens = {
+	colors: {
+		red: {
+			500: '#c53030',
+		},
+	},
 	borderRadius: {
 		xs: '4',
 		sm: '6',
@@ -17,18 +18,21 @@ const Props = {
 		3: '6',
 		4: '8',
 	},
-}
+} as const
 
 export namespace Styles {
 	type NamedStyles<T> = { [P in keyof T]: ViewStyle | TextStyle | ImageStyle }
+	type StyleFunction = (theme: typeof tokens) => {
+		[P in keyof Any]: ViewStyle | TextStyle | ImageStyle
+	}
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	export function create<T extends NamedStyles<T> | NamedStyles<any>>(
-		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-		styles: T & NamedStyles<any>,
-	): T
+	export function create<T extends NamedStyles<T>>(
+		styles: (T & NamedStyles<Any>) | StyleFunction,
+	): T {
+		if (typeof styles === 'function') {
+			return styles(tokens) as T & NamedStyles<T>
+		}
+
+		return styles as T & NamedStyles<T>
+	}
 }
-
-const s = Styles.create({
-	container: {},
-})
