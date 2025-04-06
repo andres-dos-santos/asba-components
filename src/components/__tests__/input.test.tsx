@@ -25,13 +25,3 @@ test('<InputLabel />', () => {
 
 	expect(inputLabel).toBeTruthy()
 })
-
-test('<InputField />', () => {
-	const view = render(<InputField testID="input" />)
-
-	const inputField = view.getByTestId('input')
-
-	fireEvent(inputField, 'focus')
-
-	expect(inputField.props.style[1].borderColor).toBe(colors.light.focus.base)
-})

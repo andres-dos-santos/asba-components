@@ -17,10 +17,9 @@ export function Input({ children, ...props }: InputProps) {
 	return <Box {...props}>{children}</Box>
 }
 
-export type InputFieldProps = TextInputProps
+export type InputFieldProps = TextInputProps & { borderColor?: string }
 
 export function InputField({ style, children, ...props }: InputFieldProps) {
-	const [focused, setFocused] = useState(false)
 	const colorScheme = useColorScheme()
 
 	return (
@@ -30,14 +29,11 @@ export function InputField({ style, children, ...props }: InputFieldProps) {
 				style,
 				{
 					borderWidth: StyleSheet.hairlineWidth,
-					borderColor: focused
-						? colors[colorScheme!].focus.base
-						: colors[colorScheme!].border.primary,
+					borderColor: props.borderColor,
 					color: colors[colorScheme!].text.primary,
 				},
 			]}
-			onFocus={() => setFocused(true)}
-			onBlur={() => setFocused(false)}
+			{...props}
 		/>
 	)
 }
