@@ -1,10 +1,13 @@
-import { StyleSheet, TextInput, type TextInputProps } from 'react-native'
+import {
+	StyleSheet,
+	TextInput,
+	useColorScheme,
+	type TextInputProps,
+} from 'react-native'
 import { useState } from 'react'
 
 import { Box, type BoxProps } from './box'
 import { P, type PProps } from './p'
-
-import { useColorScheme } from '../hooks/use-color-scheme'
 
 import { colors } from '../constants/colors'
 
@@ -18,7 +21,7 @@ export type InputFieldProps = TextInputProps
 
 export function InputField({ style, children, ...props }: InputFieldProps) {
 	const [focused, setFocused] = useState(false)
-	const colorScheme = useColorScheme(colors)
+	const colorScheme = useColorScheme()
 
 	return (
 		<TextInput
@@ -27,8 +30,9 @@ export function InputField({ style, children, ...props }: InputFieldProps) {
 				{
 					borderWidth: StyleSheet.hairlineWidth,
 					borderColor: focused
-						? colorScheme.focus.base
-						: colorScheme.focus.base,
+						? colors[colorScheme!].focus.base
+						: colors[colorScheme!].border.primary,
+					color: colors[colorScheme!].text.primary,
 				},
 			]}
 			onFocus={() => setFocused(true)}
