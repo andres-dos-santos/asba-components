@@ -17,7 +17,11 @@ jobs:
           ref: test
 
       - name: Install dependencies
+<<<<<<< HEAD
         run: npm install --legacy-peer-deps
+=======
+        run: npm install --force
+>>>>>>> develop
 
       - name: Run tests
         run: CI=true npm run test

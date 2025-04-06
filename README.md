@@ -20,7 +20,7 @@ This package is fully tested and written in TypeScript, so reliability is high.
 
 Includes the `useColorScheme` hook, which allows integration with light and dark themes using your custom color palette.
 
-To make it easier, you can create a new hook like this:
+To make it easier, you can create a new hook like this
 
 ```tsx
 import { colors } from 'my-color-palette'; // must have 'dark' and 'light' as keys.
