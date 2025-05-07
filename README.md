@@ -37,3 +37,13 @@ import { onChangeTheme } from '@asba/components'
 
 onChangeTheme()
 ```
+
+## Tests
+
+Don't forget to add `@asba/components` to your Jest `transformIgnorePatterns` JSON.
+
+```json
+"transformIgnorePatterns": [
+  "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg|@asba/components)"
+]
+```
