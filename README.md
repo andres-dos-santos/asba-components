@@ -23,9 +23,10 @@ Includes the `useColorScheme` hook, which allows integration with light and dark
 To make it easier, you can create a new hook like this
 
 ```tsx
+import { useColorScheme } from '@asba/components';
 import { colors } from 'my-color-palette'; // must have 'dark' and 'light' as keys.
 
-export function useMyHook() {
+export function useTheme() {
   return useColorScheme(colors);
 }
 ```
@@ -35,7 +36,7 @@ If you want to change the app theme, just run this function.
 ```tsx
 import { onChangeTheme } from '@asba/components'
 
-onChangeTheme()
+onChangeTheme() // you can pass 'dark' or 'light' to 
 ```
 
 ## Tests
