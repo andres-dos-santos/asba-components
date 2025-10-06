@@ -27,8 +27,6 @@ export function InputField({ style, children, ...props }: InputFieldProps) {
 			style={[
 				style,
 				{
-					borderWidth: StyleSheet.hairlineWidth,
-					borderColor: props.borderColor,
 					color: colors[colorScheme!].text.primary,
 				},
 			]}
