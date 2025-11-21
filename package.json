@@ -6,7 +6,7 @@
     "build": "tsc"
   },
   "bin": {
-    "asba-create-theme": "./src/cli.js"
+    "asba-create-theme": "./cli.js"
   },
   "keywords": [
     "asba",
