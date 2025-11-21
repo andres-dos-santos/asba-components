@@ -6,7 +6,7 @@ import type { Theme } from '../theme'
 
 interface UseTheme {
 	theme: Theme['dark'] // pode ser o light também
-	onChangeTheme: () => ColorSchemeName
+	onChangeTheme: (theme?: ColorSchemeName) => ColorSchemeName
 }
 
 export function useTheme(): UseTheme {
