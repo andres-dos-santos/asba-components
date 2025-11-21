@@ -17,10 +17,9 @@ export {
 	type InputFieldProps,
 } from './components/input'
 
-export { useColorScheme } from './hooks/use-color-scheme'
+export { useTheme } from './hooks/use-theme'
+export { ThemeProvider } from './providers/theme-provider'
 
 export { spacings } from './constants/spacings'
 export { fontSizes } from './constants/font-sizes'
 export { borderRadius } from './constants/border-radius'
-
-export { onChangeTheme } from './functions/change-theme'
