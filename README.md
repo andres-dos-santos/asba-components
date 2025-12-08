@@ -75,19 +75,6 @@ The `changeTheme` function accepts `'light'` or `'dark'` as parameters, or toggl
 
 Edit the generated `constants/theme.ts` file to add your own colors, spacing values, font sizes, and more. The theme object should include both `light` and `dark` mode configurations.
 
-## Additional Features
-
-The package includes the `useColorScheme` hook for basic color scheme detection, which allows integration with light and dark themes using your custom color palette.
-
-```tsx
-import { useColorScheme } from '@asba/components';
-import { colors } from 'my-color-palette'; // must have 'dark' and 'light' as keys.
-
-export function useAppColorScheme() {
-  return useColorScheme(colors);
-}
-```
-
 ## Tests
 
 Don't forget to add `@asba/components` to your Jest `transformIgnorePatterns` configuration:
