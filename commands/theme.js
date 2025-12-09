@@ -4,9 +4,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 function adjustColor(hex, amount) {
+  if (!hex) process.exit(1)
+
   let [r, g, b] = hex
     .replace('#', '')
-    .match(/.{1,2}/g)!
+    .match(/.{1,2}/g)
     .map(x => parseInt(x, 16))
 
   r = Math.min(255, Math.max(0, r + amount))
