@@ -1,8 +1,8 @@
 #!/usr/bin/env node
+
 import { execTheme } from '../commands/theme.js'
 
 const args = process.argv.slice(2)
-
 const command = args[0]
 
 switch (command) {
@@ -11,8 +11,6 @@ switch (command) {
     break
 
   default:
-    console.log(`
-      Comandos disponíveis:
-        asba theme -p "#primary" -s "#secondary"
-    `)
+    console.log('❌ Comando desconhecido.')
+    console.log('Use: npx asba theme -p "#primary" -s "#secondary"')
 }

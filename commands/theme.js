@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -21,7 +19,7 @@ function adjustColor(hex, amount) {
     .toUpperCase()}`
 }
 
-export function generateVariants(color) {
+function generateVariants(color) {
   return {
     base: color,
     hover: adjustColor(color, -20),
@@ -29,32 +27,32 @@ export function generateVariants(color) {
   }
 }
 
+// ⬇️ ESTA É A FUNÇÃO CHAMADA PELO CLI
+export function execTheme(args) {
+  let primary = null
+  let secondary = null
 
-const args = process.argv.slice(2)
-let primary = null
-let secondary = null
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === '-p') primary = args[i + 1]
+    if (args[i] === '-s') secondary = args[i + 1]
+  }
 
-for (let i = 0; i < args.length; i++) {
-  if (args[i] === '-p') primary = args[i + 1]
-  if (args[i] === '-s') secondary = args[i + 1]
-}
+  if (!primary) {
+    console.error('❌ Você precisa informar o -p "#primary".')
+    process.exit(1)
+  }
 
-if (!primary) {
-  console.error('❌ Você precisa informar o -p "#primary".')
-  process.exit(1)
-}
+  if (!secondary) {
+    console.error('❌ Você precisa informar o -s "#secondary".')
+    process.exit(1)
+  }
 
-if (!secondary) {
-  console.error('❌ Você precisa informar o -s "#secondary".')
-  process.exit(1)
-}
+  const p = generateVariants(primary)
+  const s = generateVariants(secondary)
 
-const p = generateVariants(primary)
-const s = generateVariants(secondary)
+  const filePath = path.join(process.cwd(), 'constants/theme.ts')
 
-const filePath = path.join(process.cwd(), 'constants/theme.ts')
-
-const content = `export const theme = {
+  const content = `export const theme = {
   light: {
     primary: "${p.base}",
     primaryHover: "${p.hover}",
@@ -133,7 +131,8 @@ const content = `export const theme = {
 }
 `
 
-fs.mkdirSync(path.dirname(filePath), { recursive: true })
-fs.writeFileSync(filePath, content)
+  fs.mkdirSync(path.dirname(filePath), { recursive: true })
+  fs.writeFileSync(filePath, content)
 
-console.log("🎨 Theme created at: ", filePath)
+  console.log("🎨 Theme created at: ", filePath)
+}
