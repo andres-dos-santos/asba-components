@@ -5,7 +5,7 @@ import { ThemeContext } from '../providers/theme-provider'
 import type { Theme } from '../theme'
 
 interface UseTheme {
-	theme: Theme
+	theme: Theme['light']
 	onChangeTheme: (theme?: ColorSchemeName) => ColorSchemeName
 }
 
