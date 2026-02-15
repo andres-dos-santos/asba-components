@@ -6,7 +6,7 @@
     "build": "tsc"
   },
   "bin": {
-    "asba": "./bin/asba.js"
+    "asba": "bin/asba.js"
   },
   "keywords": [
     "asba",
