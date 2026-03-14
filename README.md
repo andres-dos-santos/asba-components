@@ -128,53 +128,6 @@ const items = [{ id: '1', name: 'Item 1' }, { id: '2', name: 'Item 2' }]
 />
 ```
 
-## Theme system
-
-The library exports `ThemeProvider` and `useTheme` to switch between `light` and `dark` themes.
-
-### 1) Create your theme
-
-```bash
-npx asba-create-theme
-```
-
-This command generates a `constants/theme.ts` file with the token structure.
-
-### 2) Wrap your app with `ThemeProvider`
-
-```tsx
-import { ThemeProvider } from '@asba/components'
-import { theme } from './constants/theme'
-
-export default function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      {/* app */}
-    </ThemeProvider>
-  )
-}
-```
-
-### 3) Read and change theme with `useTheme`
-
-```tsx
-import { Box, Button, ButtonTitle, useTheme } from '@asba/components'
-
-function ThemeSwitcher() {
-  const { theme, changeTheme } = useTheme()
-
-  return (
-    <Box style={{ backgroundColor: theme.colors.background, padding: 16 }}>
-      <Button onPress={() => changeTheme()}>
-        <ButtonTitle>Toggle theme</ButtonTitle>
-      </Button>
-    </Box>
-  )
-}
-```
-
-`changeTheme` accepts `light` or `dark`, and also toggles automatically when called without parameters.
-
 ## Exported tokens
 
 You can also use the ready-to-use design tokens from the library:
