@@ -18,8 +18,6 @@ export {
   type InputFieldProps,
 } from './components/input'
 
-export { useTheme } from './hooks/use-theme'
-
 export { spacings } from './constants/spacings'
 export { fontSizes } from './constants/font-sizes'
 export { borderRadius } from './constants/border-radius'
