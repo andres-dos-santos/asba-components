@@ -19,7 +19,6 @@ export {
 } from './components/input'
 
 export { useTheme } from './hooks/use-theme'
-export { ThemeProvider } from './providers/theme-provider'
 
 export { spacings } from './constants/spacings'
 export { fontSizes } from './constants/font-sizes'
