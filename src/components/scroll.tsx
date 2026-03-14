@@ -1,8 +1,8 @@
 import { ScrollView, type ScrollViewProps } from 'react-native'
 
-type Props = ScrollViewProps
+export type ScrollProps = ScrollViewProps
 
-export function Scroll({ children, ...props }: Props) {
+export function Scroll({ children, ...props }: ScrollProps) {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
