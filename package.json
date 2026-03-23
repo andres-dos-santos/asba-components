@@ -8,12 +8,7 @@
   "bin": {
     "asba": "bin/asba.js"
   },
-  "keywords": [
-    "asba",
-    "react",
-    "react-native",
-    "expo"
-  ],
+  "keywords": ["asba", "react", "react-native", "expo"],
   "author": "andres-dos-santsos",
   "license": "ISC",
   "description": "",
@@ -23,13 +18,13 @@
     "react-native": "^0.82.1",
     "typescript": "^5.8.2"
   },
-  "peerDepencies": {
+  "peerDependencies": {
     "react": "19.1.0",
     "react-native": "0.81.1"
   },
   "dependencies": {
     "@shopify/flash-list": "^2.3.0",
-    "culori": "^4.0.2",
     "prompts": "^2.4.2"
-  }
+  },
+  "files": ["bin", "src"]
 }
