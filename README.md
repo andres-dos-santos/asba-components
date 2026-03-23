@@ -7,12 +7,13 @@ It provides a simple unstyled structure, reusable components, and a light/dark t
 
 ```bash
 npm install @asba/components
+yarn add @asba/components
 ```
 
-or
+After installing, you need to choose the [color](https://tailwindcss.com/docs/colors) you want to use for switching between light and dark mode; zinc is the default.
 
 ```bash
-yarn add @asba/components
+npx asba init
 ```
 
 ## Quick start
