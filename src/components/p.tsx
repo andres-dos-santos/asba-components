@@ -12,8 +12,7 @@ export function P({ children, style, ...props }: PProps) {
     <Text
       style={[
         {
-          backgroundColor:
-            colors[PREFER_THEME_COLOR][colorScheme === 'dark' ? 100 : 900],
+          color: colors[PREFER_THEME_COLOR][colorScheme === 'dark' ? 100 : 900],
         },
         style,
       ]}
