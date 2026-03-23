@@ -7,6 +7,7 @@ export {
 } from './src/components/button'
 export { P, type PProps } from './src/components/p'
 export { Row, type RowProps } from './src/components/row'
+export { ThemedBox, type ThemedBoxProps } from './src/components/themed-box'
 export { List, type ListProps } from './src/components/list'
 export { Scroll, type ScrollProps } from './src/components/scroll'
 export {

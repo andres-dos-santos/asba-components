@@ -5,7 +5,9 @@ import { colors } from '../constants/colors'
 
 import { Box, type BoxProps } from './box'
 
-export function ThemedBox({ style, children, ...props }: BoxProps) {
+export type ThemedBoxProps = BoxProps
+
+export function ThemedBox({ style, children, ...props }: ThemedBoxProps) {
   const colorScheme = useColorScheme()
 
   return (
