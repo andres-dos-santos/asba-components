@@ -7,8 +7,8 @@
     "target": "ES2019",
     "jsx": "react-jsx",
     "moduleResolution": "Node",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "include": ["src", "bin/cli.js"],
+  "include": ["src", "bin/cli.js", "index.ts"],
   "exclude": ["dist", "node_modules"]
 }

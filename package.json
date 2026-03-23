@@ -28,6 +28,8 @@
     "react-native": "0.81.1"
   },
   "dependencies": {
-    "@shopify/flash-list": "^2.3.0"
+    "@shopify/flash-list": "^2.3.0",
+    "culori": "^4.0.2",
+    "prompts": "^2.4.2"
   }
 }
