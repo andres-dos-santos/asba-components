@@ -1,6 +1,6 @@
 {
   "name": "@asba/components",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "main": "index.ts",
   "scripts": {
     "build": "tsc"
@@ -8,7 +8,12 @@
   "bin": {
     "asba": "bin/asba.js"
   },
-  "keywords": ["asba", "react", "react-native", "expo"],
+  "keywords": [
+    "asba",
+    "react",
+    "react-native",
+    "expo"
+  ],
   "author": "andres-dos-santsos",
   "license": "ISC",
   "description": "",
@@ -26,5 +31,9 @@
     "@shopify/flash-list": "^2.3.0",
     "prompts": "^2.4.2"
   },
-  "files": ["bin", "src", "scripts"]
+  "files": [
+    "bin",
+    "src",
+    "scripts"
+  ]
 }
