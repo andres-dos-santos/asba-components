@@ -22,8 +22,6 @@ export type InputFieldProps = TextInputProps & {
 }
 
 export function InputField({
-  style,
-  children,
   onFocused = undefined,
   ...props
 }: InputFieldProps) {
